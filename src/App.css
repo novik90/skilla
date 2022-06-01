@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+.page {
+    display: flex;
+    flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page__nav {
+    min-width: 240px;
+    height: 100%;
+    background-color: #091336;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page__main {
+    background-color: #F1F4F9;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
 }
 
-.App-link {
-  color: #61dafb;
+.main__header {
+    height: 64px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 5px #E9EDF3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 24px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+
+.header__date {
+    font-size: 15px;
+    min-width: 120px;
+}
+
+.header__date-text {
+    color: #899CB1;
+}
+
+.analytics {
+    display: flex;
+    justify-content: space-between;
+}
+
+.analytics__item {
+    position: relative;
+    width: 192px;
+    padding: 0 12px;
+    font-size: 14px;
+}
+
+.analytics__text {
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.analytics__text--green {
+    padding-left: 4px;
+    color: #28A879;
+}
+
+.analytics__text--yellow {
+    padding-left: 4px;
+    color: #FFD500;
+}
+
+.analytics__text--red {
+    padding-left: 4px;
+    color: #EA1A4F;
+}
+
+.analytics__progress {
+    background-color: #DEE6F5;
+    height: 6px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.analytics__progress--green::after {
+    content: "";
+    position: absolute;
+    background-color: #28A879;
+    border-radius: 12px;
+    height: 6px;
+    width: 66.66667%;
+}
+
+.analytics__progress--yellow::after {
+    content: "";
+    position: absolute;
+    background-color: #FFD500;
+    border-radius: 12px;
+    height: 6px;
+    width: 40%;
+}
+
+.analytics__progress--red::after {
+    content: "";
+    position: absolute;
+    background-color: #EA1A4F;
+    border-radius: 12px;
+    height: 6px;
+    width: 67%;
+}
+
+.header__search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 150px;
+    padding: 0 12px;
+    margin-right: 32px;
+}
+
+.header__company {
+    display: flex;
+    align-items: center;
+    color: #899CB1;
+    margin-right: 40px;
+}
+
+.header__company-text {
+    color: inherit;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.header__company-icon {
+    display: block;
+    text-align: center;
+    padding-left: 4px;
+    height: 24px;
+    width: 24px;
+}
+
+.header__user-settings {
+    display: flex;
+    align-items: center;
+}
+
+.header__user-picture {
+    height: 40px;
+    width: 40px;
+}
+
+.balance {
+    display: flex;
+    justify-content: flex-end;
+    gap: 48px;
+    /* padding: 20px 0; */
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 10px 12px;
+    border-radius: 48px;
+}
+
+.balance-icon {
+    display: block;
+    height: 24px;
+}
+
+.badge__text {
+    font-size: 14px;
+    color: #899CB1;
+}
+
+.balance__calendar {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.balance__calendar-text {
+    font-size: 14px;
+    color: #005FF8;
+}
+
+.filter {
+    display: flex;
+    font-size: 14px;
+}
+
+.filter__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.filter__types {
+    display: flex;
+    gap: 32px;
+}
+
+.filter__type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter__text {
+    color: #5E7793;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
